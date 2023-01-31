@@ -1,0 +1,1971 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+    min-height: 200vh;
+    font-family: 'Cabin', Sans-serif;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s, visibility .35s, height .35s;
+    overflow: hidden;
+    background: black;
+    z-index: -1;
+}
+
+#main-menu {
+    display: block;
+    height: 100px;
+    width: 100%;
+    background-image: url(./image/pizza-copy-2.jpg);
+    margin: 0px;
+    z-index: 9;
+}
+
+#main-menu ul {
+    max-width: 800px;
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    padding: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 9;
+}
+
+#main-menu li {
+    list-style-type: none;
+    font-size: 2rem;
+
+}
+
+
+
+#main-menu a:hover {
+    color: #CA0808;
+}
+
+.side-head {
+    background-color: #CA0808;
+    padding: 20px 20px 10px 10px;
+    color: white;
+    text-align: center;
+}
+
+.search-bar {
+    margin-left: 15px;
+    margin-right: 15px !important;
+}
+
+#hamburger-input {
+    display: none;
+}
+
+.side-row {
+    padding-top: 20px;
+}
+
+.bi-nav-side {
+    margin-left: 20px;
+
+}
+
+
+
+#hamburger-menu {
+    position: fixed;
+
+
+    top: 32px;
+    left: 45px;
+    width: 28px;
+    height: 23px;
+    display: none;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Cabin', Sans-serif;
+    background: linear-gradient(to bottom,
+            white, white 10%,
+            black 20%, black 44%,
+            white 20%, white 20%,
+            black 60%, black 89%,
+            white 40%, white 40%);
+}
+
+#hamburger-menu #sidebar-menu {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    color: #555;
+    transition: 0.3s;
+    overflow: scroll;
+
+    box-sizing: border-box;
+}
+
+#side-bar1 {
+    display: none;
+}
+
+#hamburger-menu h3 {
+    color: #B9FAF8;
+    font-size: 2.2rem;
+}
+
+#hamburger-menu ul {
+    padding-left: 0px;
+}
+
+#hamburger-menu li {
+    list-style-type: none;
+    line-height: 3rem;
+}
+
+#hamburger-menu a {
+    color: #777777 !important;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+#hamburger-menu a:hover {
+    text-decoration: underline;
+}
+
+#hamburger-input:checked+#hamburger-menu #sidebar-menu {
+    visibility: visible;
+    left: 0;
+}
+
+#hamburger-input:checked~.overlay {
+    visibility: visible;
+    opacity: 0.4;
+}
+
+
+.warpper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab-menu {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0px 2px;
+    background: #bbb;
+    display: inline-block;
+    color: black;
+
+    border-radius: 3px 3px 0px 0px;
+
+}
+
+.panels {
+    background: #fffffff6;
+
+    min-height: 200px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 3px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.panel {
+    display: none;
+    animation: fadein .8s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.tabs-bar {
+    margin-top: 20px;
+}
+
+.panel-title {
+    font-size: 1.5em;
+    font-weight: bold
+}
+
+.radio {
+    display: none;
+}
+
+#one:checked~.panels #one-panel,
+#two:checked~.panels #two-panel {
+    display: block
+}
+
+#one:checked~.tabs-bar #one-tabs,
+#two:checked~.tabs-bar #two-tabs {
+    background: #CA0808;
+    color: white;
+
+}
+
+/* --------------------------------------------------------------last */
+
+
+
+/* --------------------- */
+.dropdown-hover:hover>.dropdown-menu {
+    display: inline-block;
+}
+
+.dropdown-hover>.dropdown-toggle:active {
+
+    pointer-events: none;
+}
+
+.navbar {
+
+    padding: 17px 10px 10px 150px !important;
+    background-color: black;
+    background-image: url(./image/pizza-copy-2.jpg);
+    background: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.navbar-slide {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 20;
+
+}
+
+
+a {
+    text-decoration: none !important;
+}
+
+u {
+    text-decoration: none !important;
+}
+
+.image-2 {
+    width: 70%;
+    height: 70px;
+}
+
+.nav-link {
+    font-size: 14px !important;
+}
+
+
+.navbar-collapse {
+    margin-left: 25px;
+    line-height: 29px;
+    margin-top: 10px;
+}
+
+button .button-change {
+    background-color: none !important;
+}
+
+p {
+    margin-bottom: none;
+}
+
+.sidenav {
+    margin-bottom: 0px;
+}
+
+.nav-item {
+    padding-right: 40px;
+    padding-top: 20px;
+    letter-spacing: .5px;
+}
+
+u {
+    color: #CA0808;
+}
+
+.call {
+    border: 1px solid white;
+    padding: 8px 2px !important;
+}
+
+.nav-link:hover {
+    color: #CA0808 !important;
+}
+
+.navbar .bi:hover {
+    fill: #CA0808 !important;
+}
+
+.list-group-item {
+    border: none !important;
+    font-size: 16px;
+    margin: 10px 10px;
+}
+
+.heading {
+    font-style: bold;
+    font-weight: 600;
+}
+
+.dropdown-menu {
+    right: 10px;
+    left: 90px;
+
+}
+
+.first-button:hover {
+    background-color: white !important;
+    color: #CA0808 !important;
+}
+
+.bi-navabar {
+    padding: 22px 68px 19px 0px;
+}
+
+.button-2 {
+    background-color: #CA0808 !important;
+}
+
+.first-button {
+    background-color: #CA0808 !important;
+    font-family: "Montserrat", Sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500;
+    fill: #ffffff !important;
+    color: #ffffff !important;
+    position: absolute !important;
+
+    border-style: solid;
+    letter-spacing: 1px;
+
+    border-radius: 5px 5px 5px 5px !important;
+    padding: 13px 36px 13px 36px !important;
+}
+
+.first-button:hover {
+    background-color: white;
+    color: #CA0808;
+}
+
+.bi-nav {
+    padding-left: 16px;
+}
+
+
+
+
+
+/* -----------------------------------first div content */
+.image-1 {
+    background-color: aqua;
+    min-height: 970px;
+    background-image: url(./image/pizza-copy-2.jpg);
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center center;
+
+
+}
+
+.banner {
+    background-image: url(./image/banner_image_3.png);
+
+    width: 100%;
+    height: 900px;
+    position: absolute;
+    right: 310px;
+    bottom: 210px;
+
+
+}
+
+.nav-para {
+    color: #CA0808;
+    font-weight: 600;
+    font-size: 18px;
+
+
+}
+
+.nav-para-1 {
+    font-size: 90px;
+    color: white;
+    font-weight: 700;
+    max-width: 77%;
+    width: 77%;
+
+
+
+
+}
+
+span {
+    color: #CA0808;
+}
+
+.nav-whole-div {
+    padding: 190px 10px 10px 100px !important;
+}
+
+.nav-para-3 {
+    color: white;
+    font-size: 20px;
+    max-width: 640px;
+    width: 640px;
+    text-align: left;
+
+
+}
+
+
+
+button.btn:hover {
+    background-color: white !important;
+    color: #cA0808 !important;
+}
+
+.container-1 {
+    position: absolute;
+    top: 950px;
+
+
+}
+
+/* --------------------------------------------first div end--------------- */
+
+
+
+
+.heading {
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+.heading-1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+
+.para {
+    font-size: 16px;
+    color: white;
+    line-height: 26px;
+}
+
+button.button-1:hover {
+    color: #CA0808 !important;
+    background-color: white !important;
+
+}
+
+.image-1-3 img:hover {
+    transform: scale(1.1);
+    transform-origin: 50% 50%;
+    border-radius: 10px;
+    transition: all 0.3s;
+
+
+
+}
+
+img {
+    border-radius: 10px;
+
+
+}
+
+.image-1-3 {
+
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+
+
+.second-section {
+
+    width: 100%;
+    height: 470px;
+
+
+}
+
+
+
+.burger-1-1 {
+    position: absolute;
+    top: 200px;
+    left: 217px;
+}
+
+.burger-2-1 {
+    position: absolute;
+    top: 34px;
+    left: 564px;
+
+}
+
+.burger-4-2 {
+    position: absolute;
+    top: 313px;
+    left: 563px;
+}
+
+.burger-5-1 {
+    position: absolute;
+    top: 165px;
+    left: 1033px;
+    text-align: center;
+}
+
+.button-1 {
+    padding: 10px 10px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: .1rem;
+
+}
+
+.para {
+    font-size: 18px;
+    color: white;
+    line-height: 26px;
+}
+
+/* ---------------------------------------------second div end------------------------- */
+.motor {
+    width: 100%;
+    height: 60px;
+}
+
+.element-shipping {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+.element-para {
+    font-size: 14px;
+    color: #777777;
+    font-family: "Montserrat", Sans-serif;
+    line-height: 1.8;
+    letter-spacing: 1.2px;
+}
+
+.container-3 {
+    border-bottom: 1px solid #968787;
+    padding: 10px 10px;
+}
+
+.container-3:hover {
+    border-bottom: 2px solid red;
+
+}
+
+.container-3 :hover .element-shipping {
+    color: #CA0808;
+
+
+}
+
+/* -------------------third div end------------------- */
+.container4-para {
+
+    margin: 0 auto;
+    font-size: 18px;
+    width: 550px !important;
+    line-height: 24px;
+    color: #777777;
+
+
+}
+
+.card-img-top {
+    padding: 10px 10px;
+    border-radius: 20px !important;
+
+
+}
+
+.card {
+    border-radius: 10px !important;
+    border: 1px solid #e2e2e2;
+    position: relative;
+    width: 19rem;
+}
+
+
+
+.amount-element {
+    font-size: 15px;
+    font-weight: 700;
+    color: #CA0808;
+}
+
+.card-text {
+    color: #777777;
+    line-height: 1.6;
+    font-size: 15px;
+
+}
+
+.card-text-wrap {
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+
+.card-para {
+    color: #333;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: .5px;
+}
+
+.bi-handbag {
+    margin: 0px 0px 12px 0px;
+
+}
+
+.btn-secondary {
+    background-color: #CA0808 !important;
+    width: 40px !important;
+    height: 40px;
+    padding-right: 32px !important;
+}
+
+button.btn-secondary:hover {
+    background-color: #333 !important;
+}
+
+.eye-element {
+
+    width: 40px !important;
+    height: 40px;
+    border-radius: 100% !important;
+    background-color: white !important;
+    padding: 0px 0px !important;
+    border: none !important;
+
+}
+
+.bi-eye,
+.bi-heart,
+.bi-shuffle {
+    margin: 0px 2px 3px 0px;
+}
+
+.bi-hearts,
+.bi-shuffles {
+    background-color: #CA0808 !important;
+}
+
+.element-row {
+    position: absolute;
+    top: 31px;
+    left: 189px;
+
+}
+
+.bi-hearts {
+    left: 60px;
+    position: absolute;
+    visibility: hidden;
+}
+
+.bi-shuffles {
+    visibility: hidden;
+}
+
+.bi-eyes {
+    left: 61px;
+    position: absolute;
+}
+
+button:hover.eye-element {
+    background-color: #CA0808 !important;
+
+}
+
+.tooltip-inner {
+    background-color: #CA0808 !important;
+}
+
+.tooltip .tooltip-arrow::before {
+    border-left-color: #ca0808 !important;
+}
+
+.eye-element-content {
+    background: #ca0808;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 23px;
+    padding: 0 10px;
+    right: 229px;
+    bottom: 450px;
+    z-index: 3;
+    position: absolute;
+}
+
+
+.card:hover .bi-hearts {
+
+    transition: all .4s;
+    position: absolute;
+    transform: translateY(50%);
+    left: 63px;
+    top: 35px;
+    visibility: visible;
+
+}
+
+.card:hover .bi-shuffles {
+    position: absolute;
+    top: 90px;
+    left: 63px;
+    transform: translateY(50%);
+    transition: all .4s;
+    visibility: visible;
+
+}
+
+.smoked-element {
+    margin-top: 25px !important;
+}
+
+.btn-handbag {
+    margin-top: 25px !important;
+}
+
+/* -------------------------------------------fourth div end */
+.section4-bg {
+    background-image: url(./image/container-5.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 520px;
+    margin-top: 100px;
+}
+
+.fast-food-element {
+    padding-top: 100px;
+    padding-left: 20px;
+    color: white;
+
+}
+
+.container5-element-para {
+    font-family: "Montserrat", Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.7em;
+    margin-left: 120px;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+    max-width: 50%;
+
+
+}
+
+.button-2 {
+
+    padding: 10px 35px !important;
+    font-size: 14px !important;
+    margin-top: 25px;
+    margin-left: 90px !important;
+
+
+}
+
+.section5-btn {
+    background-color: none !important;
+    color: white !important;
+    border: 1px solid white !important;
+    padding: 10px 35px !important;
+    margin-top: 22px;
+    margin-right: 150px !important;
+
+
+}
+
+/* --------------------------------------------section5 end */
+.container-6 {
+    color: var(--e-global-color-text);
+    font-family: "Montserrat", Sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.section6 {
+    margin-top: 100px;
+}
+
+/* -----------------demo */
+
+.warpper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .1vh;
+    margin: 0px 2px;
+
+    display: inline-block;
+    color: #777777;
+    position: relative;
+
+}
+
+.tabs {
+    border-bottom: 1px solid #777777;
+}
+
+
+.pannel-image {
+
+    width: 300px !important;
+    height: 200px !important;
+    border-radius: 17px;
+    padding: 10px 10px;
+}
+
+.card-pannel {
+    width: 25rem !important;
+    padding: 10px 10px 0px 10px;
+}
+
+.card-pannel:hover {
+
+    box-shadow: 0 0 5px 5px #f1f1f1;
+
+}
+
+.panel {
+    display: none;
+    animation: fadein 0.8s;
+}
+
+#exTab1 .tab-content {
+    color: black;
+
+    padding: 5px 5px;
+}
+
+#exTab2 h3 {
+    color: black;
+
+    padding: 5px 15px;
+}
+
+/* remove border radius for the tab */
+
+#exTab1 .nav-pills>li>a {
+    border-radius: 0;
+}
+
+/* change border radius for the tab , apply corners on top*/
+
+#exTab3 .nav-pills>li>a {
+    border-radius: 4px 4px 0 0;
+}
+
+#exTab3 .tab-content {
+    color: white;
+
+    padding: 5px 15px;
+}
+
+.nav-pills {
+    justify-content: center;
+}
+
+.nav-pills-div {
+    border-bottom: 1px solid #777777;
+}
+
+.nav-pills-li {
+    color: #777777 !important;
+
+}
+
+.nav-pills-li:hover {
+    color: #CA0808 !important;
+}
+
+.nav-pills-div:hover {
+    border-bottom: 1px solid #CA0808;
+}
+
+.card-para:hover {
+    color: #CA0808 !important;
+}
+
+/*-----------------------------------------container6 end-------------------  */
+.section-7 {
+    background-image: url(./image/bg-testimonials.jpg);
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 530px;
+    margin-top: 90px;
+
+}
+
+.carousel-image {
+    width: 7%;
+
+    margin: 0 auto;
+    border-radius: 100%;
+
+}
+
+.corousel-para {
+    color: white;
+    max-width: 55%;
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: .8px;
+    font-size: 27px;
+    font-style: italic;
+
+
+}
+
+.carousel-star {
+    margin: 0 auto;
+    max-width: 7%;
+    margin-top: 10px;
+
+}
+
+.corousel-para1 {
+    color: white;
+    max-width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+
+}
+
+.carousel-item {
+    margin-top: 100px;
+    line-height: 32px;
+}
+
+/* ----------------------section-7-------------------------------- */
+.section8 {
+    background-color: #262626;
+
+    border-bottom: 1px solid #777777;
+    padding: 50px 0px 30px 0px;
+
+}
+
+.container-8 {
+    color: var(--e-global-color-text);
+    font-family: "Montserrat", Sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 60px;
+
+}
+
+.section8-div {
+    padding-left: 40px !important;
+    padding-top: 5px;
+}
+
+.section8-head {
+    color: white;
+    font-weight: 600;
+    line-height: 24px;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 28px;
+}
+
+.section8-para {
+    color: #777777;
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: 400;
+    font-family: "Montserrat", Sans-serif;
+}
+
+.section8-para1 {
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+/* Defines the width of the carousel and centers it on the page */
+.slick-carousel {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+/* The width of each slide */
+.slick-slide {
+    width: 350px;
+}
+
+/* Color of the arrows */
+.slick-next::before,
+.slick-prev::before {
+    color: blue;
+}
+
+
+
+
+.email {
+    padding: 10px 115px 10px 10px;
+
+
+}
+
+.email-div-1 {
+    margin-top: 20px !important;
+
+
+}
+
+.subcribe-button {
+    padding: 10px 50px 14px 10px !important;
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    border-radius: 0px !important;
+    letter-spacing: .1rem;
+    font-size: 15px !important;
+}
+
+.button-div {
+    padding: 0px !important;
+
+
+}
+
+.icon-8 {
+    width: 40px !important;
+    height: 40px;
+    border-radius: 100%;
+    line-height: 35px;
+    border: 1px solid #bbb;
+    margin-right: 10px;
+}
+
+.icon-div {
+    margin-left: 0px !important;
+    margin-top: 25px !important;
+
+}
+
+.foot-para {
+    color: #bbb;
+    padding-top: 20px;
+
+}
+
+.foot-head {
+    color: white;
+
+}
+
+a:hover .foot-anchor {
+    color: #CA0808;
+}
+
+.last-foot {
+    padding: 0px;
+}
+
+.copy-right {
+    color: #CA0808;
+}
+
+.copy-right:hover {
+    color: white;
+}
+
+.foot-image {
+    margin-top: 16px !important;
+}
+
+
+/* -----------------------------------------------------media ---------- */
+@media only screen and (max-width: 1440px) {
+    .nav-item {
+        padding-right: 30px !important;
+    }
+
+    .nav-link {
+        font-size: 16px !important;
+    }
+
+
+
+
+    /* ---------------------------first div end */
+
+
+    /* -----------------------------------------section5 end */
+    .carousel-star {
+        margin: 0 auto;
+        max-width: 10%;
+        margin-top: 10px;
+
+    }
+
+    /* ----------------------section-7-------------------------------- */
+
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+
+
+    #main-menu {
+        display: none;
+    }
+
+    #hamburger-menu {
+        display: inline;
+    }
+
+    #side-bar1 {
+        display: inline;
+    }
+
+    .side-slide {
+        display: block !important;
+
+        width: 100% !important;
+        height: 74px;
+        background-image: url(./image/pizza-copy-2.jpg);
+        margin: 0px;
+        position: fixed !important;
+    }
+
+    .image-1 {
+
+        background-position: center center;
+        background-size: cover;
+        min-height: 470px;
+
+    }
+
+    .image-3 {
+        max-width: 370px;
+        height: 425px;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .nav-whole-div {
+        text-align: left;
+        padding: 50px 20px !important;
+
+
+    }
+
+    .navbar {
+
+
+        padding: 0px 0px 0px 20px !important;
+
+    }
+
+    .image-2 {
+        width: 100%;
+        height: 50px;
+    }
+
+
+    .navbar-collapse {
+        margin-left: 10px;
+        line-height: 2px;
+        margin-top: 16px;
+
+    }
+
+
+    .bi-navabar {
+        padding: 60px 0px 0px 10px;
+    }
+
+
+    p.sidenav {
+        padding: 10px 10px;
+    }
+
+
+    .nav-para {
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .nav-para-1 {
+        font-size: 60px;
+        text-align: left;
+
+    }
+
+    .nav-para-3 {
+        color: white;
+        font-size: 18px;
+        max-width: 650px;
+        width: 512px;
+        text-align: left;
+
+
+    }
+
+    /* -------------------------------------------first-container */
+    .container-1 {
+
+        top: 512px;
+    }
+
+    .image-3-1 {
+        width: 120px;
+
+    }
+
+    .burger2 {
+        width: 100%;
+        height: 200px;
+    }
+
+    .last-image {
+        max-width: 100%;
+        height: 425px;
+    }
+
+    .burger-1-1 {
+        position: absolute;
+        top: 155px;
+        left: 150px;
+    }
+
+    .burger-2-1 {
+        position: absolute;
+        top: 14px;
+        left: 400px;
+
+    }
+
+    .burger-4-2 {
+        position: absolute;
+        top: 236px;
+        left: 400px;
+    }
+
+    .burger-5-1 {
+        position: absolute;
+        top: 124px;
+        left: 729px;
+        text-align: center;
+    }
+
+    .para {
+        font-size: 16px;
+        color: white;
+        line-height: 25px;
+    }
+
+
+    /* -------------------------second media end */
+    .container-3 {
+        display: none;
+    }
+
+    /* ---------------------------thired div end */
+    .card {
+        width: 14rem !important;
+    }
+
+    .container4-para {
+        margin-left: 150px;
+        font-size: 19px;
+    }
+
+    .element-row {
+        left: 112px;
+    }
+
+    .bi-eye,
+    .bi-heart,
+    .bi-shuffle {
+        margin: 0px 0px 4px 0px;
+    }
+
+    .eye-element-content {
+        right: 150px;
+        bottom: 464px;
+    }
+
+    .sales-content {
+        bottom: 467px;
+    }
+
+    .bi-handbag {
+        margin: 0px 0px 50px 0px;
+
+    }
+
+    .btn-secondary {
+        padding-right: 27px !important;
+
+    }
+
+    .btn-handbag {
+        margin-top: 17px !important;
+    }
+
+    .smoked-element {
+        margin-top: 23px !important;
+    }
+
+    /* -------------------------section4 end-------------------- */
+    .section5-btn {
+        padding: 10px 10px !important;
+        margin-right: 114px !important;
+        margin-top: 22px;
+    }
+
+    .button-2 {
+        padding: 10px 10px !important;
+
+    }
+
+    .card-pannel {
+        width: 18rem !important;
+        height: 230px !important;
+    }
+
+    .pannel-image {
+        padding: 0px 0px;
+        width: 300px !important;
+        height: 173px !important;
+        margin-top: 15px;
+        padding: 0px 0px;
+    }
+
+    /* -----------------------------------------section5 end */
+    .carousel-star {
+        max-width: 12%;
+
+    }
+
+    /* ----------------------section-7-------------------------------- */
+
+    .email {
+        padding: 10px 80px 10px 10px;
+
+
+    }
+
+    .subcribe-button {
+        padding-right: 21px !important;
+        padding-bottom: 14px !important;
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .image-1 {
+
+        background-position: center center;
+        background-size: cover;
+        min-height: 400px;
+
+    }
+
+    .navbar-toggler {
+        padding: 0px !important;
+    }
+
+    .nav-whole-div {
+        padding: 90px 12px 10px 37px !important;
+
+
+
+    }
+
+    .nav-para {
+        font-size: 19px;
+        text-align: left;
+        line-height: 1rem;
+    }
+
+    .nav-para-1 {
+        font-size: 40px;
+        text-align: left;
+    }
+
+    .nav-para-3 {
+        font-size: 20px;
+    }
+
+
+    img {
+        max-height: 500px;
+    }
+
+
+    .para {
+        font-size: 15px;
+        color: white;
+        line-height: 26px;
+    }
+
+    .button-1 {
+        padding: 5px 5px !important;
+        font-size: 12px !important;
+    }
+
+    .heading-1 {
+        font-size: 20px;
+    }
+
+
+    .bi-navabar {
+        padding: 50px 0px 0px 10px;
+
+    }
+
+    .bi-heart {
+        margin-top: 0px !important;
+    }
+
+
+
+    /* ------------------------------------first div end */
+    .container-1 {
+        position: absolute;
+        top: 435px;
+
+
+    }
+
+    .burger-1-1 {
+        position: absolute;
+        top: 162px;
+        left: 155px;
+    }
+
+    .burger-2-1 {
+        position: absolute;
+        top: 15px;
+        left: 425px;
+
+    }
+
+    .burger-4-2 {
+        position: absolute;
+        top: 250px;
+        left: 415px;
+    }
+
+    .last-image {
+        display: none;
+    }
+
+
+    /* ----------------------------second div end */
+    .card {
+        width: 20rem !important;
+        margin-bottom: 20px;
+    }
+
+    .element-row {
+        left: 206px;
+        top: 25px;
+    }
+
+    .bi-eye,
+    .bi-heart,
+    .bi-shuffle {
+        margin: 5px 0px 4px 0px;
+    }
+
+    .eye-element-content {
+        right: 242px;
+        bottom: 431px;
+    }
+
+    .sales-content {
+        bottom: 450px;
+    }
+
+    .btn-secondary {
+        padding-right: 29px !important;
+        margin-top: 0px !important;
+
+    }
+
+    .container4-para {
+        margin-left: 50px;
+        font-size: 19px;
+    }
+
+    /* ---------------------------------section 4 end----------------- */
+    .section5-btn {
+        padding: 10px 10px !important;
+        margin-right: 50px !important;
+
+
+    }
+
+    .button-2 {
+        padding: 10px 14px !important;
+        margin-left: 60px !important;
+
+    }
+
+    .container5-element-para {
+        margin-left: 40px;
+        max-width: 100%;
+    }
+
+    /* ------------------------section5 end */
+    .button-view {
+        max-width: 40% !important;
+    }
+
+    /* ------------------------------------section6 end */
+    .carousel-star {
+        max-width: 15%;
+
+    }
+
+    /* ----------------------section-7-------------------------------- */
+    .email {
+        padding: 10px 64px 10px 10px;
+
+    }
+
+    .subcribe-button {
+
+        padding-bottom: 13px !important;
+
+
+    }
+
+    .smoked-element {
+        margin-top: 2px !important;
+    }
+
+    .sales-content {
+        bottom: 430px;
+    }
+
+
+}
+
+
+
+
+@media only screen and (max-width: 426px) {
+
+
+
+    .image-2 {
+        padding: 10px;
+        margin: 10px 10px 10px 10px;
+
+    }
+
+    #hamburger-menu {
+        left: 18px;
+    }
+
+    .bi-nav {
+        padding-left: 3px;
+    }
+
+    .bi-nav-side {
+        margin-top: 2px;
+    }
+
+
+    .bi-navabar {
+        padding: 35px 0px 0px 0px;
+    }
+
+    .burger-1-1 {
+        position: absolute;
+        top: 144px;
+        left: 144px;
+    }
+
+    .burger-2-1 {
+        position: absolute;
+        top: 444px;
+        left: 18px;
+
+    }
+
+    .burger-4-2 {
+        position: absolute;
+        top: 685px;
+        left: 20px;
+    }
+
+    .burger2 {
+        width: 367px;
+        height: 212px;
+    }
+
+    .burger-5-1 {
+        display: none;
+    }
+
+    .heading {
+        font-size: 20px;
+        font-weight: 600;
+
+    }
+
+    .heading-1 {
+        font-size: 30px;
+        font-weight: 600;
+        color: white;
+    }
+
+    .para {
+        font-size: 17px;
+        color: white;
+        line-height: 26px;
+    }
+
+    .nav-para-3 {
+        display: none;
+    }
+
+    .button-1 {
+        padding: 10px 10px !important;
+        font-size: 15px !important;
+    }
+
+    .image-3 {
+        width: 100%;
+        height: 400px;
+    }
+
+
+
+    .second-section {
+
+        width: 100%;
+        height: 940px;
+
+    }
+
+    .burger2 {
+        width: 100%;
+        height: 217px;
+    }
+
+    /* ----------------------second div end */
+    .card {
+        width: 21rem !important;
+        margin-bottom: 20px;
+    }
+
+    .container4-para {
+        margin-left: 10px;
+        width: 350px !important;
+
+    }
+
+    .container-4 {
+        padding-left: 30px;
+    }
+
+    /* ---------------------------section 4 end-------------------------- */
+    .section4-bg {
+        display: none;
+    }
+
+    /* ---------------------section-5 end----------------------------------- */
+    .card-pannel {
+        width: 18rem !important;
+        height: 490px !important;
+        margin: 0 auto;
+        margin-bottom: 50px !important;
+
+    }
+
+    .pannel-image {
+        padding: 0px 0px;
+        width: 300px !important;
+        height: 290px !important;
+        margin-top: 15px;
+        padding: 0px 0px
+    }
+
+    .button-view {
+        max-width: 67% !important;
+    }
+
+    /* ---------------------section-6 end----------------------------------- */
+
+    .carousel-star {
+        max-width: 25%;
+
+    }
+
+    .corousel-para {
+        font-size: 19px;
+        max-width: 90%;
+    }
+
+    .carousel-image {
+        width: 17%;
+
+    }
+
+    /* ----------------------section-7-------------------------------- */
+
+    .foot-image1 {
+        width: 100%;
+        height: 21px;
+    }
+
+    .email {
+        padding: 10px 66px 10px 10px;
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 376px) {
+    .burger-1-1 {
+        position: absolute;
+        top: 145px;
+        left: 120px;
+    }
+
+
+    .burger-2-1 {
+        position: absolute;
+        top: 430px;
+        left: 10px;
+
+    }
+
+    .burger-4-2 {
+        position: absolute;
+        top: 667px;
+        left: 10px;
+    }
+
+    .button-1 {
+        font-size: 11px !important;
+    }
+
+    .image-3-1 {
+        width: 100px;
+    }
+
+    .bi-nav-side {
+        margin-left: 0px;
+    }
+
+    .bi-nav {
+        padding-left: 10px;
+    }
+
+    .container-4 {
+        padding-left: 15px;
+
+
+    }
+
+    .subcribe-button {
+        padding-bottom: 14px !important;
+    }
+
+
+
+    /* ---------------------second div end--------------------- */
+    .card {
+        width: 20rem !important;
+    }
+
+    /* -----------------------section 4 end------------------------- */
+    .carousel-star {
+        max-width: 29%;
+
+    }
+
+    .smoked-element {
+        margin-top: 5px !important;
+    }
+
+    .sales-content {
+        bottom: 416px;
+    }
+
+    /* ----------------------section-7-------------------------------- */
+
+
+}
+
+@media only screen and (max-width: 320px) {
+    .burger-1-1 {
+        left: 110px !important;
+    }
+
+    .container-4 {
+        padding-left: 0px;
+    }
+
+    .card {
+        width: 18rem !important;
+    }
+
+    .element-row {
+        left: 170px;
+    }
+
+    .eye-element-content {
+        right: 212px;
+        bottom: 445px;
+    }
+
+    .sales-content {
+        bottom: 449px;
+    }
+
+    .container4-para {
+        width: 280px !important;
+    }
+
+    .bi-nav-side {
+        margin-left: 20px;
+    }
+
+    .bi-nav-side1 {
+        margin-left: 20px;
+    }
+
+    .image-3-1 {
+        padding-left: 10px;
+    }
+
+    /* -------------------------------section4 end------------------------ */
+
+    .card-pannel {
+        width: 17rem !important;
+        height: 490px !important;
+        margin: 0 auto;
+    }
+
+    .button-view {
+        max-width: 90% !important;
+    }
+
+    /* -----------------------------section6 end */
+    .carousel-star {
+        max-width: 35%;
+
+    }
+
+    /* ----------------------section-7-------------------------------- */
+
+
+}
